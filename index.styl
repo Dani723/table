@@ -1,0 +1,253 @@
+table
+  border-collapse: collapse
+  border-spacing: 0
+  border: 0
+  &.vclFixed
+    table-layout: fixed
+  &.vclTable
+    &.vclCondensed
+      th
+        padding: 0.2em 0.3em
+      td
+        padding: 0.2em 0.3em
+    div
+      &.vclExtendedSelectbox
+        margin-bottom: 0
+    &.vclNoBorder
+      td
+        border: 0
+
+.vclTable
+  width: 100%
+  margin-top: 0
+  margin-bottom: var(--block-elem-bottom-margin)
+  .vclRowSelectability
+    cursor: pointer
+  th
+    text-align: left
+    line-height: 1.5em
+    padding: 0.2em 0.4em
+    vertical-align: middle
+    border-width: 0 0 1px
+    border-style: solid
+    border-color: var(--table-header-bg-color)
+    background-color: var(--table-header-bg-color)
+    color: var(--table-header-color)
+    a
+      color: var(--table-header-color)
+    & > *
+      line-height: 1.8em
+      font-size: 0.96em
+      font-weight: bold
+  .vclTableToolbar
+    th
+      background-color: var(--table-toolbar-bg-color)
+  &.vclDblHead
+    thead
+      div
+        height: 4em
+      th
+        div
+          & > button
+            margin-top: 1em
+  td
+    text-align: left
+    padding-top: 0.3em
+    padding-left: 0.4em
+    padding-bottom: 0.3em
+    padding-right: 0.4em
+    vertical-align: top
+    border-width: 0 0 1px
+    border-style: solid
+    border-color: var(--table-border-color)
+  tfoot
+    td
+      font-weight: bold
+      background-color: var(--table-footer-bg-color)
+      color: var(--table-footer-color)
+  .vclSelected
+    td >
+      a
+        text-decoration: underline
+        color: var(--table-row-selected-color)
+  .vclSortableCol
+    cursor: pointer
+    a
+      margin-right: 1em
+
+.vclTable th > .vclButtonStd,
+.vclTable th > .vclButtonStd:hover,
+.vclTable th > .vclButtonStd:active
+  line-height: 2em
+  font-size: 0.9em
+  font-weight: bold
+
+
+/* Input fields in tables */
+
+table.vclTable select,
+table.vclTable textarea,
+table.vclTable input[type="text"],
+table.vclTable input[type="password"],
+table.vclTable input[type="datetime"],
+table.vclTable input[type="datetime-local"],
+table.vclTable input[type="date"],
+table.vclTable input[type="month"],
+table.vclTable input[type="time"],
+table.vclTable input[type="week"],
+table.vclTable input[type="number"],
+table.vclTable input[type="email"],
+table.vclTable input[type="url"],
+table.vclTable input[type="search"],
+table.vclTable input[type="tel"],
+table.vclTable input[type="color"],
+table.vclTable input[type="file"]
+  margin-bottom: 0
+
+/* Alignment modifiers, required to override default td alignment */
+
+.vclTable td.vclAlignRight,
+.vclTable .vclAlignRight td
+  text-align: right
+
+.vclTable td.vclAlignLeft,
+.vclTable .vclAlignLeft td
+  text-align: left
+
+.vclTable td.vclAlignCentered,
+.vclTable .vclAlignCentered td
+  text-align: center
+
+.vclVAlignMiddle
+  td
+    vertical-align: middle
+
+.vclVAlignBottom
+  td
+    vertical-align: bottom
+
+/* Modifiers for borders */
+
+.vclDottedBorder,
+table.vclTable.vclDottedBorder td
+  border-style: dotted
+
+table.vclTable.vclVerticalBorder td,
+table.vclTable.vclVerticalBorder th
+  border-width: 0 1px 1px 0
+
+table.vclTable.vclVerticalBorder td:last-child,
+table.vclTable.vclVerticalBorder th:last-child
+  border-right-width: 0
+
+.vclStickedTable table.vclTable.vclVerticalBorder td:last-child,
+.vclStickedTable table.vclTable.vclVerticalBorder th:last-child
+  border-right-width: 1px
+
+.vclTable .vclSelected,
+.vclTable .vclSelected:hover,
+.vclTable .vclSelected:active
+  border-style: solid
+  border-width: 0
+
+.vclTable input,
+.vclTable select,
+.vclTable textarea,
+.vclTable .vclExtendedSelectboxContainer
+  margin-bottom: 0
+
+ /* Scrolling Table */
+
+.vclScrollingTable,
+.vclStickedTable
+  position: relative
+  width: 100%
+  display: block
+  overflow: hidden
+  margin-bottom: var(--block-elem-bottom-margin)
+
+.vclScrollingTable
+  & > div
+    overflow: auto
+  thead
+    tr
+      width: 100%
+
+.vclStickedTable
+  & > div
+    overflow: hidden
+
+.vclScrollingTable table,
+.vclStickedTable table
+  width: 100%
+  margin-bottom: 0
+
+.vclScrollingTable thead,
+.vclStickedTable thead
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  display: block
+
+.vclScrollingTable tfoot,
+.vclStickedTable tfoot
+  position: absolute
+  left: 0
+  bottom: 0
+  width: 100%
+  display: block
+
+.vclScrollingTable [class^="vclSpan-"],
+.vclScrollingTable [class*=" vclSpan-"]
+  box-sizing: content-box
+
+.vclStickedTableContainer
+  & > div
+    float: left
+  & > .vclStickedTable
+    width: 20%
+  & > .vclScrollingTable
+    width: 80%
+
+.vclTable .vclSortableCol.vclSortAsc button.vclButtonStd i,
+.vclTable .vclSortableCol.vclSortDesc button.vclButtonStd i
+  color: var(--table-header-button-hover-color)
+
+.vclCellHighlight
+  background-color: var(--table-highlight-bg-color)
+
+table
+  &.vclTable
+    &.vclRowHoverHighlight
+      tbody
+        tr
+          &:hover
+            background-color: var(--table-highlight-hover-bg-color)
+
+.vclAltRowColor tbody tr:nth-child(2n+1),
+.vclAltRowColor tbody tr:nth-child(2n+1)
+  background-color: var(--table-alt-bg-color)
+
+.vclTableFilter
+  th
+    background: none
+    background-color: var(--table-filter-bg-color)
+
+/* Selection background will be assigned to TD instead of TR,
+because IE8-9 does not support gradient for TRs */
+
+.vclTable .vclSortableCol button.vclButtonStd:hover,
+.vclTable .vclSortableCol button.vclButtonStd:focus,
+.vclTable .vclSortableCol button.vclButtonStd:active,
+.vclTable .vclSortableCol button.vclButtonStd:visited
+  background: none
+  outline: 0
+  color: var(--table-color)
+
+.vclTable .vclSelected td,
+.vclTable .vclSelected:hover td,
+.vclTable .vclSelected:active td,
+.vclTable .vclSelected .vclCellHighlight
+  color: var(--table-row-selected-color)
+  background-color: var(--table-row-selected-bg-color)

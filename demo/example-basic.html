@@ -1,0 +1,100 @@
+<table id="vclTable0" class="vclTable vclAltRowColor vclVAlignMiddle" role="listbox">
+  <thead>
+    <tr>
+      <th class="vclSpan-5p"></th>
+      <th class="vclSpan-50p vclSortableCol" tabindex="1" role="button">
+        <button class="vclButtonStd vclSquare vclTransparent vclFloatRight" type="button"><i class="fa fa-sort"></i></button>
+        <span>Description</span>
+      </th>
+      <th class="vclSpan-20p vclSortableCol vclSortAsc" tabindex="1" role="button">
+        <button class="vclButtonStd vclSquare vclTransparent vclFloatRight" type="button"><i class="fa fa-sort-up"></i></button>
+        <span>Right Column</span>
+      </th>
+      <th class="vclSpan-20p"><span>Centered Column</span></th>
+      <th class="vclSpan-5p"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr data-index="1">
+      <td class="vclAlignCentered"><input id="inputid" type="radio" value="loremipsum" name="loremipsum"></td>
+      <td>Lorem ipsum</td>
+      <td class="vclAlignRight">11.000</td>
+      <td class="vclAlignCentered vclCellHighlight">Sent</td>
+      <td class="vclAlignCentered"><button type="button" class="vclButtonStd vclSquare vclTransparent vclLarge"><i class="fa fa-trash-o"></i></button></td>
+    </tr>
+    <tr data-index="2">
+      <td class="vclAlignCentered"><input id="inputid" type="radio" value="loremipsum" name="loremipsum"></td>
+      <td><a href="#vclTable0">Lorem ipsum dolor sit amet</a>, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</td>
+      <td class="vclAlignRight">11.000</td>
+      <td class="vclAlignCentered vclCellHighlight">Sent</td>
+      <td class="vclAlignCentered"><button type="button" class="vclButtonStd vclSquare vclTransparent vclLarge"><i class="fa fa-trash-o"></i></button></td>
+    </tr>
+    <tr data-index="3">
+      <td class="vclAlignCentered"><input id="inputid" type="radio" value="selected" name="loremipsum" checked="checked"></td>
+      <td>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</td>
+      <td class="vclAlignRight">11.000</td>
+      <td class="vclAlignCentered vclCellHighlight">N/A</td>
+      <td class="vclAlignCentered"><button type="button" class="vclButtonStd vclSquare vclTransparent vclLarge"><i class="fa fa-trash-o"></i></button></td>
+    </tr>
+    <tr data-index="4">
+      <td class="vclAlignCentered"><input id="inputid" type="radio" value="loremipsum" name="loremipsum"></td>
+      <td>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</td>
+      <td class="vclAlignRight">11.000</td>
+      <td class="vclAlignCentered vclCellHighlight">On hold</td>
+      <td class="vclAlignCentered"><button type="button" class="vclButtonStd vclSquare vclTransparent vclLarge"><i class="fa fa-trash-o"></i></button></td>
+    </tr>
+  </tbody>
+</table>
+
+<input id="vclHiddenInput0" type="hidden" value="">
+  <div class="vclPagination">
+    <nav role="navigation" class="vclPaginationPaging">
+      <div>
+        <button type="button" class="vclButtonStd vclTransparent vclSquare" disabled="disabled"><i class="fa fa-step-backward"></i></button>
+        <button type="button" class="vclButtonStd vclTransparent vclSquare" disabled="disabled"><i class="fa fa-caret-left"></i></button>
+      </div>
+    <ul class="vclPageSelector">
+      <li class="vclSelected"><span class="vclButtonStd vclTransparent">1</span></li>
+      <li><a type="button" class="vclButtonStd vclTransparent">2</a></li>
+      <li><a type="button" class="vclButtonStd vclTransparent">3</a></li>
+      <li><a type="button" class="vclButtonStd vclTransparent">4</a></li>
+    </ul>
+      <div>
+        <button type="button" class="vclButtonStd vclTransparent vclSquare"><i class="fa fa-caret-right"></i></button>
+        <button type="button" class="vclButtonStd vclTransparent vclSquare"><i class="fa fa-step-forward"></i></button>
+      </div>
+    </nav>
+
+    <div id="entriesPerPage" class="vclDropdown vclFloatRight">
+    <button type="button" class="vclButtonStd">10<i class="vclButtonIconRight fa fa-chevron-down"></i></button>
+    <div class="vclDropdownContent">
+      <ul class="vclDropdownMenu">
+        <li><a href="#vclButtons_Dropdown">25</a></li>
+        <li><a href="#vclButtons_Dropdown">50</a></li>
+        <li><a href="#vclButtons_Dropdown">100</a></li>
+      </ul>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var oVclDropdown4 = vclFromProto(VclDropdown, {
+      'dropdownSel' : '#entriesPerPage',
+      'config' : {
+        'initiation' : 'click',
+        'side' : 'left'           // 'right' or 'left. Default: 'left'.
+      }
+    });
+  </script>
+  </div>
+  <script type="text/javascript">
+  // create new object oVclTable1
+  var oVclTable0 = vclFromProto(VclTable, {
+    'tableSel' : '#vclTable0',
+    'hiddenInputSel' : '#vclHiddenInput0',
+    'config' : {
+      'selectionType' : 'radio',            // 'checkbox' or 'radio'.
+      'rowSelectionViaClick' : true,
+      'scrollingTable' : false,           // true or false. NOTE: enabling this option wraps the table into DIVs, generated by JavaScript.
+      'massAction' : true,              // true or false. NOTE: this option is only available for selectiontype "checkbox".
+    }
+  });
+</script>

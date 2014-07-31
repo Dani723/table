@@ -1,0 +1,40 @@
+{
+  "name": "vcl-table",
+  "description": "Display tabular data",
+  "version": "0.0.1",
+  "style": "index.styl",
+  "author": {
+    "name": "n-fuse Gmbh",
+    "email": "info@n-fuse.de",
+    "url": "www.n-fuse.de"
+  },
+  "contributors": [
+    {
+      "name": "Thomas Hoppe",
+      "email": "thomas.hoppe@n-fuse.de"
+    }
+  ],
+  "license": {
+    "type": "MIT"
+  },
+  "devDependencies": {
+  },
+  "dependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vcl/table.git"
+  },
+  "keywords": [
+    "css",
+    "vcl",
+    "component",
+    "table"
+  ],
+  "vcldoc": {
+    "category": "",
+    "categoryPrio": 1,
+    "subCategory": "",
+    "subCategoryPrio": 1
+  }
+}
