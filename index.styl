@@ -78,7 +78,6 @@ table
 .vclTable th > .vclButtonStd,
 .vclTable th > .vclButtonStd:hover,
 .vclTable th > .vclButtonStd:active
-  line-height: 2em
   font-size: 0.9em
   font-weight: bold
 
@@ -155,60 +154,6 @@ table.vclTable.vclVerticalBorder th:last-child
 .vclTable textarea,
 .vclTable .vclExtendedSelectboxContainer
   margin-bottom: 0
-
- /* Scrolling Table */
-
-.vclScrollingTable,
-.vclStickedTable
-  position: relative
-  width: 100%
-  display: block
-  overflow: hidden
-  margin-bottom: var(--block-elem-bottom-margin)
-
-.vclScrollingTable
-  & > div
-    overflow: auto
-  thead
-    tr
-      width: 100%
-
-.vclStickedTable
-  & > div
-    overflow: hidden
-
-.vclScrollingTable table,
-.vclStickedTable table
-  width: 100%
-  margin-bottom: 0
-
-.vclScrollingTable thead,
-.vclStickedTable thead
-  position: absolute
-  left: 0
-  top: 0
-  width: 100%
-  display: block
-
-.vclScrollingTable tfoot,
-.vclStickedTable tfoot
-  position: absolute
-  left: 0
-  bottom: 0
-  width: 100%
-  display: block
-
-.vclScrollingTable [class^="vclSpan-"],
-.vclScrollingTable [class*=" vclSpan-"]
-  box-sizing: content-box
-
-.vclStickedTableContainer
-  & > div
-    float: left
-  & > .vclStickedTable
-    width: 20%
-  & > .vclScrollingTable
-    width: 80%
 
 .vclTable .vclSortableCol.vclSortAsc button.vclButtonStd i,
 .vclTable .vclSortableCol.vclSortDesc button.vclButtonStd i
