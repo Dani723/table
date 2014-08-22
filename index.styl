@@ -36,9 +36,11 @@ table
     a
       color: var(--table-header-color)
     & > *
+    & > *:hover
       line-height: 1.8em
       font-size: 0.96em
       font-weight: bold
+      vertical-align: top
   .vclTableToolbar
     th
       background-color: var(--table-toolbar-bg-color)
@@ -130,15 +132,15 @@ table.vclTable input[type="file"]
 /* Modifiers for borders */
 
 .vclDottedBorder,
-table.vclTable.vclDottedBorder td
+vclTable.vclDottedBorder td
   border-style: dotted
 
-table.vclTable.vclVerticalBorder td,
-table.vclTable.vclVerticalBorder th
+vclTable.vclVerticalBorder td,
+vclTable.vclVerticalBorder th
   border-width: 0 1px 1px 0
 
-table.vclTable.vclVerticalBorder td:last-child,
-table.vclTable.vclVerticalBorder th:last-child
+vclTable.vclVerticalBorder td:last-child,
+vclTable.vclVerticalBorder th:last-child
   border-right-width: 0
 
 .vclStickedTable table.vclTable.vclVerticalBorder td:last-child,
