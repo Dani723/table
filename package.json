@@ -2,6 +2,7 @@
   "name": "vcl-table",
   "description": "Display tabular data",
   "version": "0.0.1",
+  "main": "package.json",
   "style": "index.styl",
   "author": {
     "name": "n-fuse Gmbh",
