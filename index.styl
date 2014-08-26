@@ -35,7 +35,7 @@ table
     color: var(--table-header-color)
     a
       color: var(--table-header-color)
-    & > *
+    & > *,
     & > *:hover
       line-height: 1.8em
       font-size: 0.96em
@@ -78,13 +78,6 @@ table
     cursor: pointer
     a
       margin-right: 1em
-
-.vclTable th > .vclButtonStd,
-.vclTable th > .vclButtonStd:hover,
-.vclTable th > .vclButtonStd:active
-  font-size: 0.9em
-  font-weight: bold
-
 
 /* Input fields in tables */
 
@@ -163,9 +156,12 @@ vclTable.vclVerticalBorder th:last-child
 .vclTable .vclSortableCol.vclSortDesc button.vclButtonStd i
   color: var(--table-header-button-hover-color)
 
-.vclCellHighlight
-  background-color: var(--table-highlight-bg-color)
+/* Alternating row colors */
+.vclAltRowColor tbody tr:nth-child(2n+1),
+.vclAltRowColor tbody tr:nth-child(2n+1)
+  background-color: var(--table-alt-bg-color)
 
+/* Row highlighting on hover */
 table
   &.vclTable
     &.vclRowHoverHighlight
@@ -174,26 +170,11 @@ table
           &:hover
             background-color: var(--table-highlight-hover-bg-color)
 
-.vclAltRowColor tbody tr:nth-child(2n+1),
-.vclAltRowColor tbody tr:nth-child(2n+1)
-  background-color: var(--table-alt-bg-color)
+/* Single cell highlighting */
+.vclCellHighlight
+  background-color: var(--table-highlight-bg-color)
 
-.vclTableFilter
-  th
-    background: none
-    background-color: var(--table-filter-bg-color)
-
-/* Selection background will be assigned to TD instead of TR,
-because IE8-9 does not support gradient for TRs */
-
-.vclTable .vclSortableCol button.vclButtonStd:hover,
-.vclTable .vclSortableCol button.vclButtonStd:focus,
-.vclTable .vclSortableCol button.vclButtonStd:active,
-.vclTable .vclSortableCol button.vclButtonStd:visited
-  background: none
-  outline: 0
-  color: var(--table-color)
-
+/* Selected row coloring */
 .vclTable .vclSelected td,
 .vclTable .vclSelected:hover td,
 .vclTable .vclSelected:active td,
