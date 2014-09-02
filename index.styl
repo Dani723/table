@@ -2,20 +2,27 @@ table
   border-collapse: collapse
   border-spacing: 0
   border: 0
-  &.vclFixed
-    table-layout: fixed
-  &.vclTable
-    &.vclCondensed
-      th
-        padding: 0.2em 0.3em
-      td
-        padding: 0.2em 0.3em
-    div
-      &.vclExtendedSelectbox
-        margin-bottom: 0
-    &.vclNoBorder
-      td
-        border: 0
+
+.vclFixed
+  table-layout: fixed
+  &.vclSingleLine,
+  &.vclSingleLine td,
+  &.vclSingleLine th
+    white-space: nowrap
+    text-overflow: ellipsis
+    overflow: hidden
+.vclTable
+  &.vclCondensed
+    th
+      padding: 0.2em 0.3em
+    td
+      padding: 0.2em 0.3em
+  div
+    &.vclExtendedSelectbox
+      margin-bottom: 0
+  &.vclNoBorder
+    td
+      border: 0
 
 .vclTable
   width: 100%
@@ -40,9 +47,6 @@ table
       font-size: 0.96em
       font-weight: bold
       vertical-align: top
-  .vclTableToolbar
-    th
-      background-color: var(--table-toolbar-bg-color)
   &.vclDblHead
     thead
       div
@@ -97,6 +101,9 @@ table.vclTable input[type="search"],
 table.vclTable input[type="tel"],
 table.vclTable input[type="color"],
 table.vclTable input[type="file"]
+  margin-bottom: 0
+
+table.vclTable .vclExtendedSelectbox
   margin-bottom: 0
 
 /* Alignment modifiers, required to override default td alignment */
@@ -156,24 +163,27 @@ vclTable.vclVerticalBorder th:last-child
   color: var(--table-header-button-hover-color)
 
 /* Alternating row colors */
+
 .vclAltRowColor tbody tr:nth-child(2n+1),
 .vclAltRowColor tbody tr:nth-child(2n+1)
   background-color: var(--table-alt-bg-color)
 
 /* Row highlighting on hover */
-table
-  &.vclTable
-    &.vclRowHoverHighlight
-      tbody
-        tr
-          &:hover
-            background-color: var(--table-highlight-hover-bg-color)
+
+&.vclTable
+  &.vclRowHoverHighlight
+    tbody
+      tr
+        &:hover
+          background-color: var(--table-highlight-hover-bg-color)
 
 /* Single cell highlighting */
+
 .vclCellHighlight
   background-color: var(--table-highlight-bg-color)
 
 /* Selected row coloring */
+
 .vclTable .vclSelected td,
 .vclTable .vclSelected:hover td,
 .vclTable .vclSelected:active td,

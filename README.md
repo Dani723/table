@@ -90,6 +90,14 @@ _Layout_
 The `auto` layout mode is used by default. For tables with toolbars however,
 the `vclFixed` class must be used.
 
+_Truncation_
+
+In conjunction with the fixed layout mode, the modifier `vclSingleLine` can be used to truncate cell content which would span more than one line and show an ellipsis to indicate truncated content instead.
+
+_Wrapping aehavior_
+
+To allow breaking words of textual cell content apart, use the modifier `vclBreakWords`. This works best in combination with the fixed layout mode.
+
 ## Usage
 
 ## Classes
@@ -113,6 +121,7 @@ the `vclFixed` class must be used.
 - `vclAlignRight`
 - `vclVAlignMiddle`
 - `vclVAlignBottom`
+- `vclSingleLine`
 
 ## Variables
 
@@ -122,14 +131,11 @@ the `vclFixed` class must be used.
 - `--table-header-bg-color`
 - `--table-header-color`
 - `--table-header-button-hover-color`
-- `--table-toolbar-bg-color`
 - `--table-footer-bg-color`
 - `--table-footer-color`
 - `--table-alt-bg-color`
-- `--table-filter-bg-color`
 - `--table-highlight-bg-color`
 - `--table-highlight-hover-bg-color`
-- `--table-toolbar-bg-color`
 - `--table-row-selected-color`
 - `--table-row-selected-bg-color`
 
