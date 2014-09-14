@@ -55,6 +55,10 @@ table
         div
           & > button
             margin-top: 1em
+  tr[aria-disabled="true"]
+    td
+      cursor: default
+      color: #999999
   td
     text-align: left
     padding-top: 0.3em
@@ -182,7 +186,7 @@ vclTable.vclVerticalBorder th:last-child
 .vclCellHighlight
   background-color: var(--table-highlight-bg-color)
 
-/* Selected row coloring */
+/* Selected cell/ row coloring */
 
 .vclTable .vclSelected td,
 .vclTable .vclSelected:hover td,
