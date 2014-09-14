@@ -126,6 +126,7 @@ To allow breaking words of textual cell content apart, use the modifier `vclBrea
 ## Variables
 
 - `--table-color`
+- `--table-disabled-color`
 - `--table-border-color`
 - `--table-bg-color`
 - `--table-header-bg-color`
