@@ -26,7 +26,10 @@
     "gulp": "^3.8.10",
     "vcl-build-demo": "git://github.com/vcl/vcl-build-demo",
     "vcl-default-theme": "git://github.com/vcl/default-theme",
-    "vcl-default-theme-terms": "git://github.com/vcl/default-theme-terms"
+    "vcl-default-theme-terms": "git://github.com/vcl/default-theme-terms",
+    "normalize.css": "^3.0.2",
+    "vcl-layout": "git://github.com/vcl/layout",
+    "vcl-utils": "git://github.com/vcl/utils"
   },
   "dependencies": {},
   "repository": {

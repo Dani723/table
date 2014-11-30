@@ -11,11 +11,10 @@ _Cell and column highlighting_
 
 Single cells and columns can be highlighted by using the `vclCellHighlight`
 class on each `td`in the respective column or on single cells only.
-An example is shown in the fourth column.
 
 _Column width_
 
-The column width can be defined in the table header using one of the classes `vclSpan-5p` - `vclSpan-90p`.
+The column width can be defined in the table header using one of the classes `vclSpan-5p` - `vclSpan-100p`.
 which define the occupied space in percent.
 
 _Heading height (two lines of text)_
@@ -39,37 +38,22 @@ Rows can be configured to be selectable (check or radio style).
 If rows are selectable, the `tbody` has the class `vclRowSelectability` and
 a selected row has the class `vclSelected`.
 
-If a table spans more than one page, every `tr` must be given the attribute `data-index`
-with a sequential number. The table selection logic uses this index in conjunction with a user-supplied hidden form field
-to keep track of the selections.
-
 _Row hovering_
 
-If a table row should be highlighted on hover, the `vclRowHoverHighlight` modifier can be used.
-
-_Row action_
-
-Actions applicable to a row as shown in the last column of the example below
-can be realized using links or any form interaction element like a button.
-
-_Global action_
-
-Actions applicable to the whole table or the set of selected rows can be realized
-with a tool bar by using the class `vclTableToolbar` as shown in the sum table exmple.
+If a table row should be highlighted on hover, the `vclRowHoverHighlight` modifier class can be used.
 
 _Alternating row color_
 
-Optionally an alternating row color can be defined by using the class `vclAltRowColor` for the `table` element.
+Optionally an alternating row color can be defined by using the modifier class `vclAltRowColor`.
 
 _Border configuration_
 
 No border is shown with `vclNoBorder`.
-The border style can be changed from solid to dotted by using the `vclDottedBorder` modifer.
+The border style can be changed from solid to dotted by using the `vclDottedBorder` modifier.
 
 _Padding style_
 
-If the default cell padding is too extensive, `vclCondensed` makes it more compact as shown in the
-multi selection example.
+If the default cell padding is too extensive, `vclCondensed` makes it more compact.
 
 _Text alignment_
 
@@ -92,11 +76,14 @@ the `vclFixed` class must be used.
 
 _Truncation_
 
-In conjunction with the fixed layout mode, the modifier `vclSingleLine` can be used to truncate cell content which would span more than one line and show an ellipsis to indicate truncated content instead.
+In conjunction with the fixed layout mode, the modifier `vclSingleLine` can
+be used to truncate cell content which would span more than one line and show
+an ellipsis to indicate truncated content instead.
 
 _Wrapping aehavior_
 
-To allow breaking words of textual cell content apart, use the modifier `vclBreakWords`. This works best in combination with the fixed layout mode.
+To allow breaking words of textual cell content apart, use the modifier
+`vclBreakWords`. This works best in combination with the fixed layout mode.
 
 ## Usage
 
